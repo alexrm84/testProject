@@ -1,5 +1,6 @@
 package com.test.entities;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -9,14 +10,13 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
-import java.io.Serializable;
 
 @Entity
 @Table(name = "cities")
 @Data
 @NoArgsConstructor
-public class City implements Serializable {
-    private static final long serialVersionUID = 665528179997177385L;
+@AllArgsConstructor
+public class City {
 
     public City(String title) {
         this.title = title;
